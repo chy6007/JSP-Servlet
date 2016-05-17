@@ -1,5 +1,5 @@
 
-# Java Web Programming 실습 with Java Servelt and JSP
+# Java Web Programming 실습 with Java Servlet and JSP
 ## 개발 환경 구축해 보기
 - IDE(Integrated Development Environment)
  - Eclipse
@@ -12,7 +12,7 @@
 
 ## Java Web Programming
 - 시나리오 
-   1. 사용자가 브라우저에 http://localhost:8000/ 입력 한다.
+   1. 사용자가 브라우저에 http://localhost:8080/ 입력 한다.
    2. 서버는 사용자의 이름과 별명을 입력 받을 수 있는 웹 페이지를 보여 준다.
    3. 사용자가 이름을 'James Gosling'을 입력 후 '제출' 버튼을 누른다
      - 서버는 아래와 같은 메지시가 담긴 웹 페이지를 보여 준다.

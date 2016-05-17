@@ -1,5 +1,5 @@
 
-# Java Web Programming 실습 with Java Servelt and JSP
+# Java Web Programming 실습 with Java Servlet and JSP
 ## 개발 환경 구축해 보기
 - IDE(Integrated Development Environment)
  - Eclipse

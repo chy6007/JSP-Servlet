@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>Servlet & JSP 과제1</h3>
-	<form>
-		<input type="text" name="name" width="200px">
-		<input type="text" name="nickname" width="200px">
-		<input type="submit" value="submit">
+	<h3>20160518 Servlet & JSP 과제</h3>
+	<form name=form1 action=/practice01/servlet01 method=post>
+		<input type="text" name="name" placeholder="name" width="200" size="5">
+		<input type="text" name="nickname" placeholder="nickname" width="200" size="5">
+		<input type="submit" value="submit" name="button"> 	
 	</form>
 </body>
 </html>

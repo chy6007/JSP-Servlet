@@ -1,4 +1,4 @@
-package studyHard;
+package ljh;
 
 import java.io.IOException;
 
@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class controller
  */
-@WebServlet("/studyHard/controller")
-public class controller extends HttpServlet {
+@WebServlet("/ljh/ServletController")
+public class ServletController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public controller() {
+    public ServletController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,19 +38,42 @@ public class controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		/* 20160519 과제 : JavaBean 적용해보기*/
 		
+		PersonBean person = new PersonBean();
+
+		String name = request.getParameter("name");
+		String nickname = request.getParameter("nickname");
+		int age = 0;
 		
-		/*
-		 * String name = request.getParameter("name");
-		 * String nickname = request.getParameter("nickname"); 
-		 */
+		if(name.equalsIgnoreCase("James Gosling")){
+			System.out.println("James Gosling");
+			age = 49;
+		} 
+		else if(name.equalsIgnoreCase("Grady Booch")){
+			System.out.println("Grady Booch");
+			age = 50;
+		}
 		
-		// System.out.println("이름: " + name);
+		person.setName(name);
+		person.setNickname(nickname);
+		person.setAge(age);
+				
+		request.setAttribute("person", person); //request.setAttribute("객체명", 객체); 
 		
-		String nextJSP = "/Response.jsp";
+		String nextJSP = "/ResponseL.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request,response);
 		
+		
+		/* 20160518 */
+		
+		/*
+		String nextJSP = "/Response.jsp";
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+		dispatcher.forward(request,response);
+		 */		
 		
 		/*
 		 * PrintWriter out = response.getWriter();
@@ -59,6 +82,7 @@ public class controller extends HttpServlet {
 		 * out.println("hello servlet");
 		 * out.println("</html>");
 		 */
+
 		
 	}
 

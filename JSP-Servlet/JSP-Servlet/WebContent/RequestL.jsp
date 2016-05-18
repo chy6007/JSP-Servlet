@@ -8,11 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>20160518 Servlet & JSP 과제</h3>
-	<form name=form1 action="studyHard/controller" method=post>
+		
+	<h3> 20160519 과제 : JavaBean 적용해보기 </h3>
+	<h4> ★ Request ★ </h4><br/>
+	<form name=form1 action="ljh/ServletController" method=post>
 		<input type="text" name="name" placeholder="name" width="300" size="10">
 		<input type="text" name="nickname" placeholder="nickname" width="300" size="10">
 		<input type="submit" value="submit" name="button"> 	
 	</form>
+	
 </body>
 </html>

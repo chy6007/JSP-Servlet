@@ -37,25 +37,26 @@ public class ServletController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
-		/* 20160519 과제 : JavaBean 적용해보기*/
 		
-		PersonBean person = new PersonBean();
-
+		final String JAMES_GOSLING = "James Gosling";
+		final String GRADY_BOOCH = "Grady Booch";
+		
+		/* 20160519 과제 : JavaBean 적용해보기*/
 		String name = request.getParameter("name");
 		String nickname = request.getParameter("nickname");
 		int age = 0;
 		
-		if(name.equalsIgnoreCase("James Gosling")){
-			System.out.println("James Gosling");
+		if(name.equalsIgnoreCase(JAMES_GOSLING)){
+			System.out.println(JAMES_GOSLING);
 			age = 49;
-		} 
-		else if(name.equalsIgnoreCase("Grady Booch")){
-			System.out.println("Grady Booch");
+		} else if(name.equalsIgnoreCase(GRADY_BOOCH)){
+			System.out.println(GRADY_BOOCH);
 			age = 50;
+		} else {
+			
 		}
 		
+		PersonBean person = new PersonBean();
 		person.setName(name);
 		person.setNickname(nickname);
 		person.setAge(age);

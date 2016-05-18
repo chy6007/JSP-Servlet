@@ -15,13 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/studyHard/controller")
 public class controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public controller() {
         super();
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub    
     }
 
 	/**
@@ -46,8 +45,25 @@ public class controller extends HttpServlet {
 //		response.setContentType("text/html");
 //		response.setContentType("euc-kr");
 
+		String name = request.getParameter("name");
+		String nickname = request.getParameter("nickname");
+		int age = 0;
+		
+		PersonBean personbean = new PersonBean();
+		
+		if(name.equalsIgnoreCase("James Gosling")) age = 49; 
+		else if(name.equalsIgnoreCase("Grady Booch")) age = 50;		
+		
+		personbean.setName(name);
+		personbean.setNickname(nickname);
+		personbean.setAge(age);
+		request.setAttribute("PersonBean", personbean);
+		
 		String nextJSP = "/Response.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request,response);
+		
+	
+
 	}
 }

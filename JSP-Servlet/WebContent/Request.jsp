@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JavaBean</title>
+<title>Singleton Pattern</title>
 </head>
 <body>
-	<center><h3>20160519 JavaBean 과제</h3>	
+	<center><h3>Singleton Pattern 적용</h3>	
 	<form name=form1 action="studyHard/controller" method=post>
 		<input type="text" name="name" placeholder="Name" width="2000" size="7" "><br />
 		<input type="text" name="nickname" placeholder="Nickname" width="2000" size="7"><br /><br />

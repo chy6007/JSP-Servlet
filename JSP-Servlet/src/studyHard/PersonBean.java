@@ -1,7 +1,7 @@
 package studyHard;
 
 import java.io.Serializable;
-import java.util.Arrays;
+import java.util.List;
 
 public class PersonBean implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -9,19 +9,21 @@ public class PersonBean implements Serializable {
 	private String name;
 	private String nickname;
 	private int age;
-	private String[] associatedWords;
+	private List<String> associatedWords;
 	
 
 	public PersonBean() {
 	}
-	
-	public String[] getAssociatedWords() {
+
+	public List<String> getAssociatedWords() {
 		return associatedWords;
 	}
 
-	public void setAssociatedWords(String[] associatedWords) {
+	public void setAssociatedWords(List<String> associatedWords) {
 		this.associatedWords = associatedWords;
-	}	
+	}
+
+
 
 	public int getAge() { return age; }
 	public String getName() { return name; }
@@ -31,12 +33,9 @@ public class PersonBean implements Serializable {
 	public void setName(String name) { this.name = name; }    
 	public void setNickname(String nickname) { this.nickname = nickname; }
 
-
 	@Override
 	public String toString() {
 		return "PersonBean [name=" + name + ", nickname=" + nickname + ", age=" + age + ", associatedWords="
-				+ Arrays.toString(associatedWords) + "]";
-	}
-
-	
+				+ associatedWords + "]";
+	}	
 }

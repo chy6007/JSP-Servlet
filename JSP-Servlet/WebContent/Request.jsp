@@ -6,17 +6,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Singleton Pattern</title>
+<title>JDBC를 이용한 DB연동</title>
 </head>
 <body>
-	<center><h3>Singleton Pattern 적용</h3>	
-	<form name=form1 action="studyHard/controller" method=post>
-		<input type="text" name="name" placeholder="Name" width="2000" size="7" "><br />
+	<center><h3>JDBC를 이용한 DB연동</h3>	
+	<form name=form2 action="studyHard/controller" method=post>
+		<input type="text" name="name" placeholder="Name" width="2000" size="7" ><br />
 		<input type="text" name="nickname" placeholder="Nickname" width="2000" size="7"><br /><br />
 		<input type="submit" value="Submit" name="button">
 	</form>
 </center>
-
 </body>
 </html>
 

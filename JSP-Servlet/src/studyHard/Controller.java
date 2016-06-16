@@ -37,16 +37,18 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String name = request.getParameter("name");
-	
-		//PersonAssocicateWordService personAssocicateWordService = new PersonAssocicateWordService();
 		
-		PersonBean personBean = PersonAssocicateWordService.getPersonBean(name);
+//		PersonAssocicateWordService personAssocicateWordService = new PersonAssocicateWordService();		
+		
+//		PersonAssocicateWordService personAssocicateWordService = PersonAssocicateWordService.getInstance();		
+//		PersonBean personBean = personAssocicateWordService.getPersonBean(name);
+		
+		PersonBean personBean = PersonAssocicateWordService.getInstance().getPersonBean(name);
 		
 		request.setAttribute("PersonBean", personBean);
 		String nextJSP = "/Response.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-		dispatcher.forward(request,response);
-		
+		dispatcher.forward(request,response);	
 	
 
 	}
